@@ -53,7 +53,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-2">
-              <a href="/curriculo.pdf" target="_blank" className={buttonVariants()}>Baixar Currículo</a>
+              <a href="/portfolio-pessoal/curriculo.pdf" target="_blank" className={buttonVariants()}>Baixar Currículo</a>
               <a href="#contato" className={buttonVariants({ variant: 'secondary' })}>Contato</a>
               <a href="https://github.com/wesley-souza8" target="_blank" rel="noreferrer" aria-label="GitHub" className={buttonVariants({ variant: 'outline' })}>
                 <FaGithub className="w-4 h-4 mr-2" /> GitHub
