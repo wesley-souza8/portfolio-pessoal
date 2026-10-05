@@ -2,7 +2,7 @@ import { getProjects } from "@/lib/projects"
 import { ProjectCard } from "@/components/ProjectCard"
 import { ModeToggle } from "@/components/ModeToggle"
 import { Button, buttonVariants } from "@/components/ui/button"
-import { Mail, FileText, Database, Code, Cloud, LineChart, FileSpreadsheet } from "lucide-react"
+import { FileText, Database, Code, Cloud, LineChart, FileSpreadsheet } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import Image from "next/image"
 
@@ -158,10 +158,6 @@ export default function Home() {
             Estou sempre aberto a novas oportunidades para criar soluções de impacto usando dados e engenharia de software.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="mailto:wesley-souza8@hotmail.com" className={buttonVariants({ size: 'lg', className: 'text-base' })}>
-              <Mail className="w-5 h-5 mr-2" />
-              wesley-souza8@hotmail.com
-            </a>
             <a href="https://github.com/wesley-souza8" target="_blank" rel="noreferrer" className={buttonVariants({ size: 'lg', variant: 'outline', className: 'text-base' })}>
               <FaGithub className="w-5 h-5 mr-2" />
               GitHub
