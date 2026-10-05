@@ -10,6 +10,7 @@ export interface ProjectData {
   repoUrl: string;
   liveUrl: string;
   content: string;
+  order: number;
 }
 
 export function getProjects(): ProjectData[] {
@@ -35,9 +36,11 @@ export function getProjects(): ProjectData[] {
         technologies: data.technologies || [],
         repoUrl: data.repoUrl || '',
         liveUrl: data.liveUrl || '',
+        order: data.order || 99,
         content,
       };
-    });
+    })
+    .sort((a, b) => a.order - b.order);
 
   return projects;
 }
