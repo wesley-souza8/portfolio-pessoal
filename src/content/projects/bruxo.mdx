@@ -1,0 +1,18 @@
+---
+title: "Assistente Virtual 'Bruxo'"
+description: "Assistente de voz inteligente em Python no estilo Alexa, integrado com IA Generativa (Llama 3), reconhecimento facial, OCR e automação de SO."
+technologies: ["Python", "Groq (Llama 3)", "OpenCV", "EasyOCR", "Edge-TTS"]
+repoUrl: "https://github.com/wesley-souza8/bruxo"
+---
+
+O **Bruxo** é um assistente virtual ativado por voz construído com Python, projetado para operar com altíssima performance unindo processamento de linguagem natural, IA generativa e visão computacional.
+
+O projeto orquestra 26 comandos autônomos utilizando o padrão **Dispatcher**, isolando a regra de negócio do controle de hardware. As interações variam desde rotinas básicas do dia a dia (agendamentos, clima, cotações) até automações complexas (Spotify, YouTube, e controle de mídias/volume do Windows).
+
+### Destaques Tecnológicos
+- **Inteligência Artificial & Respostas em Tempo Real:** Utiliza a API Groq Cloud (LPU) com o modelo Llama 3 para inferências em menos de 1 segundo. A conversão de texto para voz (TTS) é renderizada inteiramente em memória RAM (via `pygame` e `io.BytesIO`) usando modelos neurais da Microsoft (Edge-TTS) de forma assíncrona, eliminando gargalos de I/O em disco.
+- **Visão Computacional e Biometria:** Integração com OpenCV utilizando o algoritmo LBPH para reconhecimento e cadastro facial. A câmera aplica equalização de histograma (`equalizeHist`) e processamento reduzido (downscale de 50%) para entregar ~30 FPS fluidos durante a inferência, mesmo em processadores limitados.
+- **Leitura de Texto Física (OCR):** Possui um comando de escaneamento que liga a webcam, extrai o texto de documentos ou telas reais através da biblioteca EasyOCR, e faz a leitura em voz alta.
+- **Tratamento de Áudio Robusto:** Calibração automática de ruído ambiente, e sistema de proteção que não permite que o assistente capte a própria voz durante as respostas ("cancelamento de eco lógico").
+
+Um projeto que não apenas serve como ferramenta utilitária, mas explora a fundo a integração em baixo nível de APIs, fluxos de áudio e redes neurais no ecossistema Python.
