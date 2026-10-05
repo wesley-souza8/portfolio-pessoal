@@ -66,7 +66,7 @@ export default function Home() {
           
           <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-muted">
             <Image 
-              src="/profile.jpg" 
+              src="/portfolio-pessoal/profile.jpg" 
               alt="Wesley Souza" 
               fill
               className="object-cover object-[center_20%]"
