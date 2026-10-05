@@ -45,10 +45,12 @@ export function ProjectCard({ project, index }: { project: ProjectData, index: n
               Código
             </a>
           ) : null}
-          <a href={project.liveUrl} target="_blank" rel="noreferrer" aria-label={`Deploy do ${project.title}`} className={buttonVariants({ size: 'sm', className: 'flex-1' })}>
-            <ExternalLink className="w-4 h-4 mr-2" />
-            Visitar
-          </a>
+          {project.liveUrl ? (
+            <a href={project.liveUrl} target="_blank" rel="noreferrer" aria-label={`Deploy do ${project.title}`} className={buttonVariants({ size: 'sm', className: 'flex-1' })}>
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Visitar
+            </a>
+          ) : null}
         </CardFooter>
       </Card>
     </motion.div>
